@@ -1,0 +1,54 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Raleway', sans-serif !important;
+}
+
+body .main {
+    height: 100vh;
+    font-size: 16px;
+}
+
+.buttons {
+    padding: 25px 0px;
+}
+
+.buttons .timer-button{
+    max-width: 150px;
+    width: 100%;
+    outline: none;
+    border: 0;
+    padding: 10px 0px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #fff;
+    background: #007bff;
+}
+
+#custom {
+    display: flex;
+    width: 100%;
+}
+
+#custom input {
+    width: 100%;
+    padding: 10px;
+    outline-color: #fff;
+    border-radius: 3px;
+    border: none;
+}
+
+.display-time-left {
+    font-size: 50px;
+}
+
+.display {
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    text-align: center;
+}
