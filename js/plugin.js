@@ -54,10 +54,11 @@ const timer = (function() {
 
     function displayTimerLeft(seconds) {
         const hour = Math.floor((seconds / 3600));
-        const minutes = Math.floor(seconds / 60);
+        const minutes = Math.floor(seconds % 3600 / 60);
         const reminderSeconds = seconds % 60;
 
-        const display = `${hour < 10 ? '0' : ''}${hour}:${minutes < 10 ? '0' : minutes > 60 ? '00' : ''}${minutes}:${reminderSeconds < 10 ? '0' : ''}${reminderSeconds} `;
+        const display = `${hour < 10 ? '0' + hour : hour} : ${minutes < 10 ? '0' + minutes : minutes} : ${reminderSeconds < 10 ? '0' + reminderSeconds : reminderSeconds}`;
+
         document.title = display;
         timerDisplay.textContent = display;
     }
